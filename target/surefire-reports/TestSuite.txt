@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 78.53 s <<< FAILURE! - in TestSuite
+tests.LoginTests.loginNegativeFormatEmailTest  Time elapsed: 13.581 s  <<< FAILURE!
+java.lang.AssertionError: No visibility element: //div[@fxlayoutalign='start center']//div
+	at tests.LoginTests.loginNegativeFormatEmailTest(LoginTests.java:33)
+
