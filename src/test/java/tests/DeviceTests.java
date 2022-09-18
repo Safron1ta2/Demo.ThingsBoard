@@ -9,7 +9,7 @@ import utils.DataProviderCredentials;
 public class DeviceTests extends TestInit {
     String url = "http://demo.thingsboard.io/devices";
 
-    @Test(priority = 10, dataProvider = "deviceDetails", dataProviderClass = DataProviderCredentials.class)
+    @Test(priority = 10, dataProvider = "deviceDetails", dataProviderClass = DataProviderCredentials.class, groups = "positive")
     public void createDeviceFullInfo(String name, String label, String description, String customer) {
         LoginPageHelper loginPage = new LoginPageHelper(driver);
         ToolbarViewHelper toolbarView = new ToolbarViewHelper(driver);
@@ -45,7 +45,7 @@ public class DeviceTests extends TestInit {
         Assert.assertTrue(isNotElementPresent(String.format(DevicesPageElements.DEVICE, name)));
     }
 
-    @Test(priority = 20)
+    @Test(priority = 20, groups = "negative")
     public void createDeviceWithoutName() {
         LoginPageHelper loginPage = new LoginPageHelper(driver);
         ToolbarViewHelper toolbarView = new ToolbarViewHelper(driver);
@@ -64,7 +64,7 @@ public class DeviceTests extends TestInit {
         Assert.assertEquals(createDeviceView.errorName().getText(), "Название обязательно.");
     }
 
-    @Test(priority = 20)
+    @Test(priority = 20, groups = "negative")
     public void createDeviceProfileWithSameName(){
         LoginPageHelper loginPage = new LoginPageHelper(driver);
         ToolbarViewHelper toolbarView = new ToolbarViewHelper(driver);
