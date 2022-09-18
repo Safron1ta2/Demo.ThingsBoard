@@ -25,6 +25,7 @@ public class CreateDeviceProfilesViewElements extends CreateDeviceViewHelper {
     public WebElement queueNameField() {
         return waitUntilElementToBeClickable(String.format(FIELD, "input", "queueName"));
     }
+
     public WebElement option(String role) {
         return waitUntilElementToBeClickable(String.format(OPTIONS, role));
     }

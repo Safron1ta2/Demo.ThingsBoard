@@ -6,8 +6,6 @@ import org.testng.annotations.Test;
 import pages.HeaderViewHelper;
 import pages.LoginPageHelper;
 
-import java.io.IOException;
-
 public class LoginTests extends TestInit {
     String url = "http://demo.thingsboard.io/login";
 
