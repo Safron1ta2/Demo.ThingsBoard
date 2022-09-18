@@ -3,8 +3,8 @@
 
 <suite name="allSuites">
     <suite-files>
-        <suite-file path="deviceProfile.xml" />
-        <suite-file path="devices.xml" />
-        <suite-file path="login.xml" />
+        <suite-file path="deviceProfile.xml"/>
+        <suite-file path="devices.xml"/>
+        <suite-file path="login.xml"/>
     </suite-files>
 </suite>
