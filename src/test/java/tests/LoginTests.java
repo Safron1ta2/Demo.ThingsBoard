@@ -11,7 +11,7 @@ import java.io.IOException;
 public class LoginTests extends TestInit {
     String url = "http://demo.thingsboard.io/login";
 
-    @Test(priority = 10)
+    @Test(priority = 10, groups = "positive")
     public void loginPositiveTest() {
         LoginPageHelper loginPage = new LoginPageHelper(driver);
         HeaderViewHelper headerView = new HeaderViewHelper(driver);
@@ -24,7 +24,7 @@ public class LoginTests extends TestInit {
         Assert.assertTrue(headerView.urlContains("home"));
     }
 
-    @Test(priority = 20)
+    @Test(priority = 20, groups = "negative")
     public void loginNegativeFormatEmailTest() {
         LoginPageHelper loginPage = new LoginPageHelper(driver);
         String invalidFormatEmail = loginPage.getEmail().replaceAll("@", "");
@@ -37,7 +37,7 @@ public class LoginTests extends TestInit {
         Assert.assertTrue(loginPage.urlContains("login"));
     }
 
-    @Test(priority = 20)
+    @Test(priority = 20, groups = "negative")
     public void loginNegativeEmailTest() {
         LoginPageHelper loginPage = new LoginPageHelper(driver);
         String invalidEmail = loginPage.getEmail().replace("t", "s");
@@ -47,7 +47,7 @@ public class LoginTests extends TestInit {
                 .assertions("Invalid username or password", "login");
     }
 
-    @Test(priority = 20)
+    @Test(priority = 20, groups = "negative")
     public void loginNegativePasswordTest() {
         LoginPageHelper loginPage = new LoginPageHelper(driver);
         String invalidPassword = loginPage.getPassword().replace("Q", "s");
@@ -57,7 +57,7 @@ public class LoginTests extends TestInit {
                 .assertions("Invalid username or password", "login");
     }
 
-    @Test(priority = 20)
+    @Test(priority = 20, groups = "negative")
     public void loginWithoutPasswordTest() {
         LoginPageHelper loginPage = new LoginPageHelper(driver);
 
