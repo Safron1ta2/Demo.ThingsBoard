@@ -8,5 +8,7 @@ abstract public class Base {
             e.printStackTrace();
         }
     }
-
+    public static long getRandomNumber() {
+        return System.currentTimeMillis();
+    }
 }

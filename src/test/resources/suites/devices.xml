@@ -9,6 +9,11 @@
     </listeners>
 
     <test name="Login tests">
+        <groups>
+            <run>
+                <exclude name="broken"/>
+            </run>
+        </groups>
         <classes>
             <class name="tests.DeviceTests"/>
         </classes>

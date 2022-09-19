@@ -1,8 +1,9 @@
 package utils;
 
+import base.Base;
 import org.testng.annotations.DataProvider;
 
-public class DataProviderCredentials {
+public class DataProviderCredentials extends Base {
     private final static String DEVICE_NAME = "Test Device";
     private final static String LABEL = "Test";
     private final static String DESCRIPTION = "This is test device";
@@ -15,12 +16,12 @@ public class DataProviderCredentials {
     @DataProvider
     public static Object[][] deviceDetails() {
         return new Object[][]{
-                {DEVICE_NAME, LABEL, DESCRIPTION, CUSTOMER}};
+                {DEVICE_NAME + getRandomNumber(), LABEL, DESCRIPTION, CUSTOMER}};
     }
 
     @DataProvider
     public static Object[][] deviceProfileDetails() {
         return new Object[][]{
-                {PROFILE_NAME, ROLE, DASHBOARD, QUEUE}};
+                {PROFILE_NAME + getRandomNumber(), ROLE, DASHBOARD, QUEUE}};
     }
 }
