@@ -2,7 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class CreateDeviceProfilesViewHelper extends CreateDeviceProfilesViewElements{
+public class CreateDeviceProfilesViewHelper extends CreateDeviceProfilesViewElements {
     public CreateDeviceProfilesViewHelper(WebDriver driver) {
         super(driver);
     }

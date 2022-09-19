@@ -62,7 +62,7 @@ public class DeviceProfilesTests extends TestInit {
     }
 
     @Test(priority = 20, groups = "negative")
-    public void createDeviceWithSameName() {
+    public void createDeviceProfileWithSameName() {
         LoginPageHelper loginPage = new LoginPageHelper(driver);
         ToolbarViewHelper toolbarView = new ToolbarViewHelper(driver);
         DeviceProfilesPageElements deviceProfilesPage = new DeviceProfilesPageElements(driver);
