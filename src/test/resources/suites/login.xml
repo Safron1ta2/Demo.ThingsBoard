@@ -10,6 +10,11 @@
 
     <test name="Login tests">
         <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <exclude name="broken"/>
+            </run>
+        </groups>
         <classes>
             <class name="tests.LoginTests"/>
         </classes>
